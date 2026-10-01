@@ -1,0 +1,259 @@
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--slate-50);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+.pesan-galat {
+  display: none;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat {
+  display: block;
+}
+
+/* Penataan 3 Struktur Baru */
+.lini {
+  padding-left: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.keterampilan-list dt {
+  font-weight: 700;
+  margin-top: var(--space-2);
+}
+
+.keterampilan-list dd {
+  margin-left: var(--space-4);
+  color: var(--color-fg);
+}
+
+details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-2);
+  background: var(--color-surface);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+<<<<<<< HEAD
+
+/* C.1 Galeri Adaptif */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+/* C.2 Isi / Kaki Kartu */
+.kartu_kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+/* Perbaikan Formulir Kontak / Data Pengirim */
+form fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin: 0;
+  min-width: 0;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Perbaikan Tabel Responsif */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+th,
+td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+section#tentang table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* =========================================
+  Penyempurnaan Tampilan Komponen
+   ========================================= */
+
+/* 1. Lini Masa / Perjalanan Saya */
+.lini {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.lini li {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+}
+
+.lini li:hover {
+  border-color: var(--color-primary);
+}
+
+.lini time {
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+/* 2. Peta Kemampuan */
+.keterampilan-list {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding: 0;
+}
+
+.keterampilan-list dt {
+  font-weight: 700;
+  color: var(--color-fg);
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.keterampilan-list dt::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.keterampilan-list dd {
+  margin-left: 0;
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* 3. Tanya Jawab / FAQ */
+details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  background: var(--color-surface);
+  transition: all 0.2s ease;
+}
+
+details:hover {
+  border-color: var(--color-primary);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-fg);
+  outline: none;
+}
+
+details[open] summary {
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+details p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* Koreksi: Kembalikan section utama agar bersih dan tidak berkotak kaku */
+main#utama > section {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+=======
+>>>>>>> 5f1d986de56aac7d3965aeb299e06c99884426dc

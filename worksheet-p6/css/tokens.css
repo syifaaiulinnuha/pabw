@@ -1,0 +1,83 @@
+/* LAPIS 1 - Nilai Primitif Mentah */
+:root {
+  --teal-700: #0f766e;
+  --teal-600: #0d9488;
+  --teal-400: #2dd4bf;
+<<<<<<< HEAD
+  --violet-600: #8b5cf6;
+  --violet-400: #a78bfa;
+=======
+>>>>>>> 5f1d986de56aac7d3965aeb299e06c99884426dc
+  --sky-500: #0284c7;
+  --rose-600: #e11d48;
+  --rose-400: #fb7185;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+<<<<<<< HEAD
+
+  /* Palet Tema Gelap ala Portofolio Profesional */
+  --dark-bg: #0b0f19;
+  --dark-surface: #111827;
+  --dark-border: #1f293d;
+  --dark-fg: #f3f4f6;
+  --dark-muted: #9ca3af;
+=======
+>>>>>>> 5f1d986de56aac7d3965aeb299e06c99884426dc
+  --white: #ffffff;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+<<<<<<< HEAD
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 999px;
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  --text-xs: 0.75rem;
+=======
+
+  --radius-md: 0.5rem;
+  --radius-full: 999px;
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+>>>>>>> 5f1d986de56aac7d3965aeb299e06c99884426dc
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-xl: 1.5rem;
+  --text-3xl: 2.25rem;
+}
+
+/* LAPIS 2 - Semantik / Peran */
+:root {
+<<<<<<< HEAD
+  --color-bg: var(--dark-bg);
+  --color-fg: var(--dark-fg);
+  --color-muted: var(--dark-muted);
+  --color-surface: var(--dark-surface);
+  --color-border: var(--dark-border);
+  --color-primary: var(--violet-600);
+  --color-danger: var(--rose-600);
+  --color-focus: var(--violet-400);
+=======
+  --color-bg: var(--slate-50);
+  --color-fg: var(--slate-900);
+  --color-surface: var(--white);
+  --color-border: var(--slate-300);
+  --color-primary: var(--teal-600);
+  --color-danger: var(--rose-600);
+  --color-focus: var(--sky-500);
+>>>>>>> 5f1d986de56aac7d3965aeb299e06c99884426dc
+  --card-pad: var(--space-4);
+  --section-gap: var(--space-6);
+}
