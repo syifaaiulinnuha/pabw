@@ -20,3 +20,23 @@ const formatKeahlian = (daftar) => daftar.join(". ");
 // Menguji fungsi di Console
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
+// Tambahkan array of object untuk daftar proyek
+const daftarProyek = [
+  { judul: "Halaman Profil", tahun: 2026, selesai: true },
+  { judul: "Katalog Produk", tahun: 2026, selesai: false },
+  { judul: "Sistem Manajemen Kopi", tahun: 2026, selesai: true },
+];
+
+// Cetak ke tabel di Console
+console.table(profil.keahlian);
+console.table(daftarProyek);
+
+// Menggunakan filter untuk mengambil proyek yang sudah selesai
+const selesai = daftarProyek.filter((proyek) => proyek.selesai);
+console.table(selesai);
+
+// Menggunakan find untuk mencari proyek tertentu
+const katalog = daftarProyek.find(
+  (proyek) => proyek.judul === "Katalog Produk",
+);
+console.log(katalog);
