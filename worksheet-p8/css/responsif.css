@@ -1,0 +1,50 @@
+/* ==================================================================
+   P6: responsif.css — Mobile-First
+   ================================================================== */
+
+/* B.1 Gaya dasar untuk layar sempit (berlaku di semua lebar, tanpa media query) */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  min-height: 100dvh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* D.1 Batasi media dan tabel lebar */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* C.1 Dua titik henti (breakpoint) memakai min-width dan satuan rem */
+/* tablet: galeri dua kolom */
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop: sidebar bersanding dengan konten */
+@media (min-width: 60rem) {
+  .content {
+    grid-template-columns: 16rem 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
