@@ -55,3 +55,42 @@ barisFilter.addEventListener("click", (event) => {
 
   render(terpilih);
 });
+// 5. Validasi dan Penanganan Form (Lembar D)
+const form = document.querySelector("form");
+
+if (form) {
+  form.addEventListener("submit", (event) => {
+    // Mencegah halaman dimuat ulang saat form dikirim (Lembar D.2)
+    event.preventDefault();
+
+    const inputNama = document.querySelector("#nama");
+    const inputEmail = document.querySelector("#email");
+    const inputNim = document.querySelector("#nim");
+    const inputPesan = document.querySelector("#pesan");
+
+    let formSah = true;
+
+    // Contoh validasi sederhana: periksa apakah nama kosong atau hanya berisi spasi (Lembar D.2)
+    if (inputNama.value.trim() === "") {
+      inputNama.setAttribute("aria-invalid", "true");
+      formSah = false;
+    } else {
+      inputNama.removeAttribute("aria-invalid");
+    }
+
+    // Periksa email
+    if (inputEmail.value.trim() === "") {
+      inputEmail.setAttribute("aria-invalid", "true");
+      formSah = false;
+    } else {
+      inputEmail.removeAttribute("aria-invalid");
+    }
+
+    // Jika seluruh kolom sah, form siap diproses
+    if (formSah) {
+      console.log("Form berhasil dikirim tanpa memuat ulang halaman!");
+      // Anda bisa menambahkan reset form atau pesan sukses di sini
+      form.reset();
+    }
+  });
+}
