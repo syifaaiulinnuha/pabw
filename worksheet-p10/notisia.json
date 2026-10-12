@@ -1,17 +1,27 @@
 [
   {
     "id": 1,
-    "title": "Membangun Sistem Jaringan Kopi",
-    "body": "Perancangan alur antarmuka dan struktur data untuk aplikasi networking kedai kopi lokal."
+    "title": "EksporHub Indonesia",
+    "body": "Platform digital untuk mendukung kesiapan ekspor dan pencocokan B2B bagi UMKM Indonesia."
   },
   {
     "id": 2,
-    "title": "Platform Ekspor UMKM Indonesia",
-    "body": "Pengembangan antarmuka web dan materi presentasi untuk mendukung kesiapan ekspor produk lokal."
+    "title": "Koneksi Kopi",
+    "body": "Perancangan alur layar dan antarmuka aplikasi jejaring kedai kopi multi-aktor."
   },
   {
     "id": 3,
-    "title": "Eksplorasi Antarmuka Web Modern",
-    "body": "Penerapan tata letak responsif menggunakan Flexbox, CSS Grid, dan manipulasi DOM JavaScript."
+    "title": "Telkomsel EcoGrid AI",
+    "body": "Pengembangan makalah, dek presentasi, dan purwarupa web interaktif untuk BCC Youth Leader Summit bersama tim EUDAIMONIA."
+  },
+  {
+    "id": 4,
+    "title": "Sudut Jogja",
+    "body": "Manuskrip karya sastra yang disiapkan untuk perancangan tata letak buku dan pemformatan PDF."
+  },
+  {
+    "id": 5,
+    "title": "NEURO-RETORIKA",
+    "body": "Buku elektronik edukatif bertopik retorika dan komunikasi yang dipasarkan melalui platform digital Lynk.id."
   }
 ]
