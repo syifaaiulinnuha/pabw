@@ -47,3 +47,34 @@ const katalog = daftarProyek.find(
   (proyek) => proyek.judul === "Katalog Produk",
 );
 console.log(katalog);
+// worksheet-p10/js/app.js
+import { ambilNotisia } from "./api.js";
+
+const wadah = document.querySelector("#daftar");
+
+function gambar(daftar) {
+  wadah.textContent = ""; // Kosongkan wadah sebelum digambar ulang
+  daftar.forEach(function (n) {
+    const kartu = document.createElement("article");
+    const judul = document.createElement("h3");
+    judul.textContent = n.title; // Menggunakan textContent agar aman dari XSS
+    kartu.appendChild(judul);
+    wadah.appendChild(kartu);
+  });
+}
+
+async function tampilkan() {
+  wadah.textContent = "Memuat..."; // Keadaan memuat
+  try {
+    const daftar = await ambilNotisia();
+    if (daftar.length === 0) {
+      wadah.textContent = "Belum ada notisia"; // Keadaan kosong
+      return;
+    }
+    gambar(daftar); // Keadaan berhasil
+  } catch (galat) {
+    wadah.textContent = "Gagal memuat data: " + galat.message; // Keadaan gagal
+  }
+}
+
+tampilkan();
