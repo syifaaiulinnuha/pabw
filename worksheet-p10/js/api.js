@@ -1,14 +1,16 @@
-// Tetapkan alamat API di satu tempat
-const ALAMAT = "https://jsonplaceholder.typicode.com/posts"; // Contoh API publik, atau ganti dengan yang Anda pilih
+// worksheet-p10/js/api.js
+const ALAMAT = "https://jsonplaceholder.typicode.com/posts";
 
 export async function ambilNotisia() {
-  const respons = await fetch(ALAMAT);
-  console.log("status", respons.status, "ok", respons.ok);
-
-  // Periksa respons.ok karena fetch tidak melempar galat pada status 404/500
-  if (!respons.ok) {
-    throw new Error("status " + respons.status);
+  try {
+    const respons = await fetch(ALAMAT);
+    if (!respons.ok) {
+      throw new Error("status " + respons.status);
+    }
+    const data = await respons.json();
+    return data;
+  } catch (galat) {
+    console.error("gagal memuat", galat.message);
+    throw galat;
   }
-
-  return respons.json();
 }
