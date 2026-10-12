@@ -1,5 +1,5 @@
 // worksheet-p10/js/api.js
-const ALAMAT = "https://jsonplaceholder.typicode.com/posts";
+const ALAMAT = "./notisia.json";
 
 export async function ambilNotisia() {
   try {

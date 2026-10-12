@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Membangun Sistem Jaringan Kopi",
+    "body": "Perancangan alur antarmuka dan struktur data untuk aplikasi networking kedai kopi lokal."
+  },
+  {
+    "id": 2,
+    "title": "Platform Ekspor UMKM Indonesia",
+    "body": "Pengembangan antarmuka web dan materi presentasi untuk mendukung kesiapan ekspor produk lokal."
+  },
+  {
+    "id": 3,
+    "title": "Eksplorasi Antarmuka Web Modern",
+    "body": "Penerapan tata letak responsif menggunakan Flexbox, CSS Grid, dan manipulasi DOM JavaScript."
+  }
+]
