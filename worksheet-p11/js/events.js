@@ -1,6 +1,7 @@
 // js/events.js
 import { state, pilihKategori } from "./state.js";
-import { tandaiTombolAktif } from "./dom.js";
+import { render, tandaiTombolAktif } from "./dom.js";
+import { aturUlang } from "./storage.js";
 
 export function pasangPendengar() {
   const barisFilter = document.querySelector("#filter");
@@ -9,11 +10,18 @@ export function pasangPendengar() {
       const tombol = event.target.closest("button");
       if (!tombol) return;
 
+      // Tangani tombol atur ulang
+      if (tombol.id === "atur-ulang") {
+        aturUlang();
+        pilihKategori("semua");
+        render(state);
+        return;
+      }
+
       const kategori = tombol.dataset.kategori;
       tandaiTombolAktif(tombol);
-
-      // Mengubah state lewat fungsi pengubah (yang otomatis merender ulang)
       pilihKategori(kategori);
+      render(state);
     });
   }
 }

@@ -1,14 +1,16 @@
 // js/state.js
 import { daftarProyek } from "./data.js";
-import { render } from "./dom.js";
+import { muat, simpan } from "./storage.js";
+
+// Muat simpanan atau gunakan nilai bawaan ("semua")
+const simpananLama = muat();
 
 export const state = {
-  kategoriAktif: "semua",
+  kategoriAktif: simpananLama?.kategoriAktif ?? "semua",
   daftarProyek: daftarProyek,
 };
 
-// Satu pintu masuk untuk setiap perubahan state
 export function pilihKategori(nilai) {
   state.kategoriAktif = nilai;
-  render(state); // Setiap state berubah, tampilan otomatis digambar ulang
+  simpan(state); // Simpan ke localStorage setiap berubah
 }
